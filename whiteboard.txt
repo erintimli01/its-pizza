@@ -4,7 +4,7 @@ small price $10
 medium price $15
 large price $20
 
-toppings
+toppings--$1 per topping?
   meat toppings
     pepperoni
     sausage
