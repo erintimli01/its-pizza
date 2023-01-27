@@ -1,0 +1,15 @@
+IT'S PIZZA!
+
+small price $10
+medium price $15
+large price $20
+
+toppings
+  meat toppings
+    pepperoni
+    sausage
+    bacon
+  veggie toppings
+    green peppers
+    mushrooms
+    olives
