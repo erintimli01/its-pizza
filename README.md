@@ -28,17 +28,18 @@ _{This is a detailed description of your application. Give as much detail as nee
 Describe Pizza()
 
 //Test 1
-Test: "It should return size and toppings undefined."
-Code: let pizza = new Pizza
-pizza.size;
-pizza.topping;
-Expected output: undefined
+Test: "It should return size and toppings."
+Code: let pizza = new Pizza("large", ["sausage", "pepperoni"]);
+Expected output: Pizza {size: "large", toppings: "sausage", "pepperoni"}
 
 //Test 2
 Test: "It should return 20 for large, 15 for medium, and 10 for small"
-Code: let pizza = new Pizza
+Code: let pizza = new Pizza()
 pizza.pizzaPrice("large")
 Expected output = 20
+
+//Test 3
+
 
 
 _{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
