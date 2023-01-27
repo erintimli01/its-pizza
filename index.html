@@ -6,39 +6,53 @@
   </head>
   <title>It's Pizza!</title>
   <body>
-    <h1>Welcome to It's Pizza!</h1>
-    <h2>Our pizza's are all served with red sauce and toppings can be added for $2 each! </h2>
-    <div class="form-group">
+    <h1>Welcome to you Its Pizza!</h1>
+    <p>Our pizza's are all served with red sauce and toppings can be added for $2 each! </p>
+
+    <form id ="pizza-form">
       <label>Choose Your Size</label>
-      <select class="pizza-size-form">
+      <select id="pizza-size-form">
         <option value="small">Small ($10)</option>
         <option value="medium">Medium ($15)</option>
         <option value="large">Large ($20)</option>
       </select>
-  <div class="form-group">
-    <label>Pick your toppings at only $2 each!</label>
-    <div class="checkbox">
-      <label><input type="checkbox" name="topping">Pepperoni</label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" name="topping">Sausage</label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" name="topping">Bacon</label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" name="topping">Green Peppers</label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" name="topping">Mushrooms</label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" name="topping">Black Olives</label>
+      <br>
+    <div id="pizza-toppings">
+      <label>Pick your toppings at only $2 each! With no selections you'll get plain cheese!</label>
+      <div>
+      <label><input type="checkbox" name="topping" id="pepperoni">Itsa ME! Pepperoni!</label>
+      </div>
+      <div>
+      <label><input type="checkbox" name="topping" id="sausage">Sausage</label>
+      </div>
+      <div>
+      <label><input type="checkbox" name="topping" id="bacon">Bacon</label>
+      </div>
+      <div>
+      <label><input type="checkbox" name="topping" id="green-peppers">Green Peppers</label>
+      </div>
+      <div>
+      <label><input type="checkbox" name="topping" id="mushrooms">Mushrooms</label>
+      </div>
+      <div>
+      <label><input type="checkbox" name="topping" id="black-olives">Black Olives</label>
+      </div>
     </div>
   </div>
   <br>
-  <button type="submit" class="btn btn-success">Submit</button>
+  <button type="submit">Come and get it!</button>
 </form>
+
+<div class="hidden" id="usersOrder">
+  <h2>It's pizza time!</h2>
+  <div id="usersSize">
+  <p>The size you selected is:</p>
+  </div>
+  <div id="usersToppings">
+  <p>Great choice on your toppings! They are:</p>
+  <div id="usersPrice">
+  <p>Your cheap and reasonable price is:</p>
+  </div>
 </div>
 
 
