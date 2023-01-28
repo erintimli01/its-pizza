@@ -53,19 +53,24 @@ Pizza.prototype.orderSelections = function() {
 //}
 
 //User Interface Logic
-const usersPizzaSize = document.querySelector("select#pizza-size-form").value;
-const usersPizzaToppings = document.querySelector("div#pizza-toppings").value;
-let newPizza = new Pizza(usersPizzaSize, usersPizzaToppings);
+
 
 function handleFormSubmission(){
   event.preventDefault();
+  const usersPizzaSize = document.querySelector("select#pizza-size-form").value;
+  const usersPizzaToppings = document.querySelector("div#pizza-toppings").value;
+  let newPizza = new Pizza(usersPizzaSize, usersPizzaToppings);
   let usersReceipt = document.getElementById("usersOrder");
   let usersSizeReceipt = document.getElementById("usersSize");
   let usersToppingsReceipt = document.getElementById("usersToppings");
   let usersPriceReceipt = document.getElementById("usersPrice");
+  let receiptTotal = newPizza.pizzaPrice();
+  usersSizeReceipt.innerText = newPizza.usersSize;
+  usersToppingsReceipt.innerText = newPizza.usersToppings;
+  receiptTotal.innerText = receiptTotal;
   usersOrder.removeAttribute("usersOrder");
 }
 
 window.addEventListener("load", function() {
-  document.querySelector("form#pizza-form").addEventListener("submit", handleFormSubmission);
+  document.getElementById("pizza-form").addEventListener("submit", handleFormSubmission);
 });
