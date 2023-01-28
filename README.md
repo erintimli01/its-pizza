@@ -46,6 +46,6 @@ Expected output = 20
 
 
 ## License
+ (MIT)[license.txt] 
 
-
-Copyright (c) _date_ _author name(s)_
+Copyright (c) _January 2023 _Erin Timlin_
