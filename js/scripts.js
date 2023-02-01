@@ -1,9 +1,5 @@
 //Business Logic-----
 
-//function Pizza(pizzaToppings, pizzaSize) {
-//this.pizzaSize = pizzaSize;
-//this.pizzeToppings = pizzaToppings;
-//}
 
 
 function Pizza(size, toppings) {
@@ -21,6 +17,7 @@ Pizza.prototype.pizzaPrice = function(size) {
   }
   return priceBySize;
 }
+
 
 
 Pizza.prototype.orderSelections = function() {
@@ -55,20 +52,22 @@ Pizza.prototype.orderSelections = function() {
 //User Interface Logic
 
 
-function handleFormSubmission(){
+function handleFormSubmission(event){
   event.preventDefault();
   const usersPizzaSize = document.querySelector("select#pizza-size-form").value;
-  const usersPizzaToppings = document.querySelector("div#pizza-toppings").value;
+  //const usersPizzaToppings = document.querySelector("div#pizza-toppings").value;
+  const usersPizzaToppings = document.querySelectorAll("input[name='toppings']:checked").value;
   let newPizza = new Pizza(usersPizzaSize, usersPizzaToppings);
+  //let toppings = newPizza.allToppings();
   let usersReceipt = document.getElementById("usersOrder");
   let usersSizeReceipt = document.getElementById("usersSize");
   let usersToppingsReceipt = document.getElementById("usersToppings");
   let usersPriceReceipt = document.getElementById("usersPrice");
   let receiptTotal = newPizza.pizzaPrice();
-  usersSizeReceipt.innerText = newPizza.usersSize;
-  usersToppingsReceipt.innerText = newPizza.usersToppings;
+  usersSizeReceipt.innerText = newPizza.size;
+  usersToppingsReceipt.innerText = newPizza.toppings;
   receiptTotal.innerText = receiptTotal;
-  usersOrder.removeAttribute("usersOrder");
+  usersOrder.removeAttribute("class");
 }
 
 window.addEventListener("load", function() {
