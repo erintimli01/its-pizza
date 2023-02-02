@@ -8,9 +8,9 @@ function Pizza(size, toppings) {
 }
 
 Pizza.prototype.pizzaPrice = function(size) {
-    if (size === "large") {
+    if (this.size === "large") {
       priceBySize = 20;
-  } else if (size === "medium") {
+  } else if (this.size === "medium") {
       priceBySize = 15;
   } else {
       priceBySize = 10;
@@ -20,9 +20,7 @@ Pizza.prototype.pizzaPrice = function(size) {
 
 
 
-Pizza.prototype.orderSelections = function() {
-  return this.size + " " + this.toppings
-}
+
 
 //Pizza.prototype.pizzaSize(orderSize) {
 //this.size[orderSize.size] = orderSize.id
@@ -57,6 +55,7 @@ function handleFormSubmission(event){
   const usersPizzaSize = document.querySelector("select#pizza-size-form").value;
   //const usersPizzaToppings = document.querySelector("div#pizza-toppings").value;
   const usersPizzaToppings = document.querySelectorAll("input[name='toppings']:checked").value;
+  //const usersPizzaToppings = document.querySelectorAll("input[type=checkbox]:checked").value;
   let newPizza = new Pizza(usersPizzaSize, usersPizzaToppings);
   //let toppings = newPizza.allToppings();
   let usersReceipt = document.getElementById("usersOrder");
@@ -66,7 +65,7 @@ function handleFormSubmission(event){
   let receiptTotal = newPizza.pizzaPrice();
   usersSizeReceipt.innerText = newPizza.size;
   usersToppingsReceipt.innerText = newPizza.toppings;
-  receiptTotal.innerText = receiptTotal;
+  usersPrice.innerText = receiptTotal;
   usersOrder.removeAttribute("class");
 }
 
