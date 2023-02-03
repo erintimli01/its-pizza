@@ -13,3 +13,78 @@ toppings--$1 per topping?
     green peppers
     mushrooms
     olives
+
+https://www.learnhowtoprogram.com/fidgetech-1-introduction-to-programming/1-3-arrays-looping/1-3-1-5-gathering-data-with-checkboxes
+https://www.tutorialstonight.com/how-to-get-all-checked-checkbox-value-in-javascript
+// selecting all checkboxes
+// of group language using querySelectorAll()
+
+function checkBoxes() {
+
+var checkboxes = document.querySelectorAll('input[name="language"]');
+var values = [];
+// looping through all checkboxes
+// if checked property is true then push
+for (var i = 0; i < checkboxes.length; i++) {
+  if (checkboxes[i].checked == true) {
+    values.push(checkboxes[i].value);
+  }
+}
+alert(values);
+
+function checkBoxes() {
+  let topping = [];
+  let toppingList = document.querySelectorAll("input[type=checkbox]:checked");
+  for (let i = 0; i < toppingList.length; i++) {
+    topping.push(toppingList[i].value);
+  }
+  return topping;
+};
+
+// let toppingsArr = this.toppings; 
+//  let toppingsArr = [];
+//   if(document.getElementById("mushrooms").checked===true){
+//     toppingsArr.push("mushrooms");
+//   } 
+//   if(document.getElementById("pepperoni").checked===true){
+//     toppingsArr.push("pepperoni");
+//   } 
+//   if(document.getElementById("sausage").checked===true){
+//     toppingsArr.push("sausage");
+  }  
+
+    let inputTopping = 0;
+  const pizzaToppings = document.getElementsByClassName('toppings');
+  for (let i=0; i < pizzaToppings.length; ++i) {
+      if (pizzaToppings[i].checked) {
+        inputTopping += parseInt(pizzaToppings[i].value);
+      }
+    }
+
+///gave toppings listed as 0
+  let inputTopping = 0;
+  const usersPizzaToppings = document.getElementById('pizza-toppings');
+  for (let i=0; i < usersPizzaToppings.length; ++i) {
+    if (usersPizzaToppings[i].checked) {
+      inputTopping += parseInt(usersPizzaToppings[i].value);
+    }
+  }
+  
+
+/// gave topping listed as NanNan
+  let inputTopping = [];
+  let toppingList = document.querySelectorAll("input[type=checkbox]:checked");
+  for (let i=0; i < toppingList.length; ++i) {
+    if (toppingList[i].checked) {
+      inputTopping += parseInt(toppingList[i].value);
+    }
+  }
+ 
+ /// usersPizzaSize not defined at let newPizza
+ let inputTopping = [];
+  let toppingList = document.querySelectorAll("input[type=checkbox]:checked");
+  for (let i=0; i < toppingList.length; ++i) {
+    inputTopping.push(toppingList[i].value);
+  }
+  return inputTopping;
+};
