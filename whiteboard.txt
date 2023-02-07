@@ -88,3 +88,27 @@ function checkBoxes() {
   }
   return inputTopping;
 };
+
+things i tried that didnt work :)
+    //const usersPizzaToppings = document.querySelector("div#pizza-toppings").value;
+    //const usersPizzaToppings = document.querySelectorAll("input[name='topping']:checked"); 
+    //const usersPizzaToppings = document.querySelectorAll("input[type=checkbox]:checked").value;
+    //let toppingArr = this.toppings;
+
+      // let inputTopping = [];
+  // let toppingList = document.querySelectorAll("input[type=checkbox]:checked");
+  // for (let i=0; i < toppingList.length; ++i) {
+  //   if (toppingList[i].checked) {
+  //     inputTopping += parseInt(toppingList[i].value);
+  //   }
+  // }
+
+  // inputTopping += parseInt(usersPizzaToppings[i].value);
+
+  // let inputTopping = 0;
+//   const pizzaToppings = document.getElemementById("pizza-toppings");
+//   for (let i=0; i < pizzaToppings.length; ++i) {
+//       if (pizzaToppings[i].checked) {
+//         inputTopping += parseInt(pizzaToppings[i].value);
+//       }
+//     }
