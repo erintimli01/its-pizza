@@ -2,40 +2,44 @@
 <html>
   <head>
   <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Happy Monkey' rel='stylesheet'>
   <script src="js/scripts.js"></script>
   </head>
   <title>It's Pizza!</title>
   <body>
     <h1>Welcome to Its Pizza!</h1>
-    <p>Our pizza's are all served with red sauce and toppings can be added for $2 each! </p>
+    <p><em>All of our pizza's are served with red sauce and mozzerlla cheese!</em></p>
+    <p>You may notice our pizza is a little more pricey than our competitors but that's because our toppings are free! You read that right...FREE! We believe in individuality and personal opinions. So if you want that topping, add it! It's Pizza!</p>
 
+    <div>
     <form id ="pizza-form">
       <label>Choose Your Size</label>
       <select id="pizza-size-form">
-        <option value="small">Small ($10)</option>
-        <option value="medium">Medium ($15)</option>
-        <option value="large">Large ($20)</option>
+        <option value="small">Small ($15)</option>
+        <option value="medium">Medium ($20)</option>
+        <option value="large">Large ($25)</option>
       </select>
-      <br>
+    </div>
+
     <div class="pizza-toppings">
-      <label>Pick your toppings at only $2 each! With no selections you'll get plain cheese!</label>
+      <label><strong>Express yourself:</strong></label>
       <div>
-      <label><input type="checkbox" name="topping" id="pepperoni">Itsa ME! Pepperoni!</label>
+      <label><input type="checkbox" name="topping" id="pepperoni">Itsa ME! <strong>Pepperoni!</strong></label>
       </div>
       <div>
-      <label><input type="checkbox" name="topping" id="sausage">Sausage</label>
+      <label><input type="checkbox" name="topping" id="sausage">Self pride <strong>Sausage</strong></label>
       </div>
       <div>
-      <label><input type="checkbox" name="topping" id="bacon">Bacon</label>
+      <label><input type="checkbox" name="topping" id="bacon"><strong>Be you! Be Bacon!</strong></label>
       </div>
       <div>
-      <label><input type="checkbox" name="topping" id="green-peppers">Green Peppers</label>
+      <label><input type="checkbox" name="topping" id="green-peppers">Green means go! Go ahead and add <strong>Green Peppers!</strong></label>
       </div>
       <div>
-      <label><input type="checkbox" name="topping" id="mushrooms">Mushrooms</label>
+      <label><input type="checkbox" name="topping" id="mushrooms">You have so <strong>Mushroom(s)</strong> to be yourself</label>
       </div>
       <div>
-      <label><input type="checkbox" name="topping" id="black-olives">Black Olives</label>
+      <label><input type="checkbox" name="topping" id="black-olives">No puns for this one but if you want <strong>Black Olives</strong>, add em baby!</label>
       </div>
     </div>
   </div>
