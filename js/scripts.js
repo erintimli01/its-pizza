@@ -23,13 +23,11 @@ function handleFormSubmission(event){
     const usersPizzaSize = document.querySelector("select#pizza-size-form").value;
 
     let toppingArr = [];
-    const usersPizzaToppings = document.querySelector("input[name='topping']:checked");
-    for (let i=0; i < toppingArr.length; i++) {
+    const usersPizzaToppings = document.querySelectorAll("input[name='topping']:checked");
+    for (let i=0; i < usersPizzaToppings.length; i++) {
       if (usersPizzaToppings[i].checked) {
         toppingArr.push(usersPizzaToppings[i].id)
-        
       }
-      return toppingArr;
     };
     
     let newPizza = new Pizza(usersPizzaSize, toppingArr);
